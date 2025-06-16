@@ -1,0 +1,91 @@
+CONFIGURAZIONE 1:
+
+2 PC CON LINUX:
+    A-> IP(192.168.0.111), NETMASK(255.255.255.0),DG(192.168.0.1)
+    B-> IP(192.168.0.106), NETMASK(255.255.255.0),DG(192.168.0.1)
+IL PC A COLLEGATO TRAMITE ETHERNET AL ROUTER CON CAVO CATe CON CAPACITÀ 1000Mbit/sec
+
+IL PC B UTILIZZA WIFI 6 con 5 GHz e 80MHz, CAPACITÀ TEORICA 1201 Mbit/sec 
+
+UN ROUTER TPLINK AX-1500 WIFI-6 
+
+
+DATI CON PC A CHE RUNNA test.py (PC connesso al wifi fa da server e PC connesso ad ethernet fa da client)
+
+Risultati dei test RECEIVER iperf3:
+Minimo throughput: 712.0 Mbit/s
+Massimo throughput: 762.0 Mbit/s
+Media throughput: 745.8 Mbit/s
+Deviazione standard: 14.878171930717832 Mbit/s
+
+Risultati dei test SENDER iperf3:
+Minimo throughput: 714.0 Mbit/s
+Massimo throughput: 765.0 Mbit/s
+Media throughput: 755.4 Mbit/s
+Deviazione standard: 14.361058456812994 Mbit/s
+
+
+DATI CON PC B CHE RUNNA test.py
+
+
+Risultati dei test RECEIVER iperf3:
+Minimo throughput: 522.0 Mbit/s
+Massimo throughput: 557.0 Mbit/s
+Media throughput: 540.4 Mbit/s
+Deviazione standard: 10.938007131100253 Mbit/s
+
+Risultati dei test SENDER iperf3:
+Minimo throughput: 524.0 Mbit/s
+Massimo throughput: 559.0 Mbit/s
+Media throughput: 542.9 Mbit/s
+Deviazione standard: 10.802314566795395 Mbit/s
+
+
+
+
+
+
+CONFIGURAZIONE 2:
+
+2 PC CON LINUX:
+    A-> IP(192.168.0.111), NETMASK(255.255.255.0),DG(192.168.0.1)
+    B-> IP(192.168.0.126), NETMASK(255.255.255.0),DG(192.168.0.1)
+IL PC A COLLEGATO TRAMITE ETHERNET AL ROUTER CON CAVO CAT5e CON CAPACITÀ 100Mbit/sec
+
+IL PC B COLLEGATO TRAMITE ETHERNET AL ROUTER CON CAVO CAT5e CON CAPACITÀ 1000Mbit/sec
+FULL DUPLEX
+CAPACITÀ TEORICA: 100mBIT/SEC
+Using TCP, on Ethernet UTCP = (1460)/(1460+20+20)+38 = 0.949
+
+UN ROUTER TPLINK AX-1500 WIFI-6 
+
+
+DATI CON PC A CHE RUNNA test.py (PC connesso al wifi fa da server e PC connesso ad ethernet fa da client)
+
+Risultati dei test RECEIVER iperf3:
+Minimo throughput: 94.1 Mbit/s
+Massimo throughput: 94.1 Mbit/s
+Media throughput: 94.1 Mbit/s
+Deviazione standard: 0.0 Mbit/s
+
+Risultati dei test SENDER iperf3:
+Minimo throughput: 94.7 Mbit/s
+Massimo throughput: 94.9 Mbit/s
+Media throughput: 94.82 Mbit/s
+Deviazione standard: 0.07483314773548065 Mbit/s
+
+
+DATI CON PC B CHE RUNNA test.py
+
+Risultati dei test RECEIVER iperf3:
+Minimo throughput: 94.0 Mbit/s
+Massimo throughput: 94.1 Mbit/s
+Media throughput: 94.09 Mbit/s
+Deviazione standard: 0.02999999999999829 Mbit/s
+
+Risultati dei test SENDER iperf3:
+Minimo throughput: 94.6 Mbit/s
+Massimo throughput: 94.9 Mbit/s
+Media throughput: 94.78 Mbit/s
+Deviazione standard: 0.11661903789690962 Mbit/s
+

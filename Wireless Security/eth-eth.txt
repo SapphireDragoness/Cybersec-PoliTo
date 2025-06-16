@@ -1,0 +1,199 @@
+Server listening on 5201 (test #1)
+    -----------------------------------------------------------
+    Accepted connection from 192.168.0.126, port 49270
+    [  5] local 192.168.0.111 port 5201 connected to 192.168.0.126 port 49276
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-1.00   sec  11.1 MBytes  93.2 Mbits/sec                  
+    [  5]   1.00-2.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   2.00-3.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   3.00-4.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   4.00-5.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   5.00-6.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   6.00-7.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   7.00-8.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   8.00-9.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   9.00-10.00  sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]  10.00-10.01  sec   128 KBytes  81.1 Mbits/sec                  
+    - - - - - - - - - - - - - - - - - - - - - - - - -
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-10.01  sec   112 MBytes  94.0 Mbits/sec                  receiver
+    -----------------------------------------------------------
+    Server listening on 5201 (test #2)
+    -----------------------------------------------------------
+    Accepted connection from 192.168.0.126, port 60710
+    [  5] local 192.168.0.111 port 5201 connected to 192.168.0.126 port 60714
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-1.00   sec  11.1 MBytes  93.2 Mbits/sec                  
+    [  5]   1.00-2.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   2.00-3.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   3.00-4.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   4.00-5.00   sec  11.1 MBytes  93.4 Mbits/sec                  
+    [  5]   5.00-6.00   sec  11.2 MBytes  94.3 Mbits/sec                  
+    [  5]   6.00-7.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   7.00-8.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   8.00-9.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   9.00-10.00  sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]  10.00-10.01  sec   128 KBytes   125 Mbits/sec                  
+    - - - - - - - - - - - - - - - - - - - - - - - - -
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-10.01  sec   112 MBytes  94.1 Mbits/sec                  receiver
+    -----------------------------------------------------------
+    Server listening on 5201 (test #3)
+    -----------------------------------------------------------
+    Accepted connection from 192.168.0.126, port 59514
+    [  5] local 192.168.0.111 port 5201 connected to 192.168.0.126 port 59528
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-1.00   sec  11.1 MBytes  93.2 Mbits/sec                  
+    [  5]   1.00-2.00   sec  11.2 MBytes  94.3 Mbits/sec                  
+    [  5]   2.00-3.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   3.00-4.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   4.00-5.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   5.00-6.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   6.00-7.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   7.00-8.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   8.00-9.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   9.00-10.00  sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]  10.00-10.01  sec   128 KBytes   119 Mbits/sec                  
+    - - - - - - - - - - - - - - - - - - - - - - - - -
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-10.01  sec   112 MBytes  94.1 Mbits/sec                  receiver
+    -----------------------------------------------------------
+    Server listening on 5201 (test #4)
+    -----------------------------------------------------------
+    Accepted connection from 192.168.0.126, port 35984
+    [  5] local 192.168.0.111 port 5201 connected to 192.168.0.126 port 36000
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-1.00   sec  11.1 MBytes  93.2 Mbits/sec                  
+    [  5]   1.00-2.00   sec  11.2 MBytes  94.3 Mbits/sec                  
+    [  5]   2.00-3.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   3.00-4.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   4.00-5.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   5.00-6.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   6.00-7.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   7.00-8.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   8.00-9.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   9.00-10.00  sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]  10.00-10.01  sec   128 KBytes   115 Mbits/sec                  
+    - - - - - - - - - - - - - - - - - - - - - - - - -
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-10.01  sec   112 MBytes  94.1 Mbits/sec                  receiver
+    -----------------------------------------------------------
+    Server listening on 5201 (test #5)
+    -----------------------------------------------------------
+    Accepted connection from 192.168.0.126, port 35168
+    [  5] local 192.168.0.111 port 5201 connected to 192.168.0.126 port 35170
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-1.00   sec  11.1 MBytes  93.2 Mbits/sec                  
+    [  5]   1.00-2.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   2.00-3.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   3.00-4.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   4.00-5.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   5.00-6.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   6.00-7.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   7.00-8.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   8.00-9.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   9.00-10.00  sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]  10.00-10.01  sec   128 KBytes   112 Mbits/sec                  
+    - - - - - - - - - - - - - - - - - - - - - - - - -
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-10.01  sec   112 MBytes  94.1 Mbits/sec                  receiver
+    -----------------------------------------------------------
+    Server listening on 5201 (test #6)
+    -----------------------------------------------------------
+    Accepted connection from 192.168.0.126, port 52594
+    [  5] local 192.168.0.111 port 5201 connected to 192.168.0.126 port 52600
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-1.00   sec  11.1 MBytes  93.2 Mbits/sec                  
+    [  5]   1.00-2.00   sec  11.2 MBytes  94.5 Mbits/sec                  
+    [  5]   2.00-3.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   3.00-4.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   4.00-5.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   5.00-6.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   6.00-7.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   7.00-8.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   8.00-9.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   9.00-10.00  sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]  10.00-10.01  sec   128 KBytes   108 Mbits/sec                  
+    - - - - - - - - - - - - - - - - - - - - - - - - -
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-10.01  sec   112 MBytes  94.1 Mbits/sec                  receiver
+    -----------------------------------------------------------
+    Server listening on 5201 (test #7)
+    -----------------------------------------------------------
+    Accepted connection from 192.168.0.126, port 40846
+    [  5] local 192.168.0.111 port 5201 connected to 192.168.0.126 port 40862
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-1.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   1.00-2.00   sec  11.2 MBytes  94.3 Mbits/sec                  
+    [  5]   2.00-3.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   3.00-4.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   4.00-5.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   5.00-6.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   6.00-7.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   7.00-8.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   8.00-9.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   9.00-10.00  sec  11.2 MBytes  94.5 Mbits/sec                  
+    [  5]  10.00-10.01  sec   128 KBytes   106 Mbits/sec                  
+    - - - - - - - - - - - - - - - - - - - - - - - - -
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-10.01  sec   112 MBytes  94.1 Mbits/sec                  receiver
+    -----------------------------------------------------------
+    Server listening on 5201 (test #8)
+    -----------------------------------------------------------
+    Accepted connection from 192.168.0.126, port 33930
+    [  5] local 192.168.0.111 port 5201 connected to 192.168.0.126 port 33934
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-1.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   1.00-2.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   2.00-3.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   3.00-4.00   sec  11.2 MBytes  94.3 Mbits/sec                  
+    [  5]   4.00-5.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   5.00-6.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   6.00-7.00   sec  11.2 MBytes  94.3 Mbits/sec                  
+    [  5]   7.00-8.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   8.00-9.00   sec  11.1 MBytes  93.4 Mbits/sec                  
+    [  5]   9.00-10.00  sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]  10.00-10.01  sec   128 KBytes   111 Mbits/sec                  
+    - - - - - - - - - - - - - - - - - - - - - - - - -
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-10.01  sec   112 MBytes  94.1 Mbits/sec                  receiver
+    -----------------------------------------------------------
+    Server listening on 5201 (test #9)
+    -----------------------------------------------------------
+    Accepted connection from 192.168.0.126, port 43584
+    [  5] local 192.168.0.111 port 5201 connected to 192.168.0.126 port 43600
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-1.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   1.00-2.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   2.00-3.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   3.00-4.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   4.00-5.00   sec  11.2 MBytes  94.3 Mbits/sec                  
+    [  5]   5.00-6.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   6.00-7.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   7.00-8.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   8.00-9.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   9.00-10.00  sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]  10.00-10.01  sec   128 KBytes   116 Mbits/sec                  
+    - - - - - - - - - - - - - - - - - - - - - - - - -
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-10.01  sec   112 MBytes  94.1 Mbits/sec                  receiver
+    -----------------------------------------------------------
+    Server listening on 5201 (test #10)
+    -----------------------------------------------------------
+    Accepted connection from 192.168.0.126, port 52508
+    [  5] local 192.168.0.111 port 5201 connected to 192.168.0.126 port 52524
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-1.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   1.00-2.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   2.00-3.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   3.00-4.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   4.00-5.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   5.00-6.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   6.00-7.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   7.00-8.00   sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]   8.00-9.00   sec  11.1 MBytes  93.3 Mbits/sec                  
+    [  5]   9.00-10.00  sec  11.2 MBytes  94.4 Mbits/sec                  
+    [  5]  10.00-10.01  sec   128 KBytes   103 Mbits/sec                  
+    - - - - - - - - - - - - - - - - - - - - - - - - -
+    [ ID] Interval           Transfer     Bitrate
+    [  5]   0.00-10.01  sec   112 MBytes  94.1 Mbits/sec                  receiver

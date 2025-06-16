@@ -1,0 +1,150 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{a4paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+
+\begin{document}
+    \section{Week 1}
+    \subsection{Basics}
+    \subsection{Cryptographic primitives}
+    A cryptographic primitive is a fundamental building block used in cryptographic protocols and algorithms. These primitives provide basic functionalities and are combined to implement more complex cryptographic operations.
+    Important symmetric primitives include:
+    \begin{itemize}
+        \item block ciphers
+        \item stream ciphers
+        \item message authentication codes
+        \item key derivation functions 
+        \item random number generators
+        \item hash functions 
+    \end{itemize}
+    Important asymmetric primitives include:
+    \begin{itemize}
+        \item public key cryptography
+        \item digital signatures
+        \item key exchange protocols
+        \item identity-based cryptography
+    \end{itemize}
+    \subsubsection{Computational feasibility}
+    We will call a task computationally infeasible if its cost as measured by either the amount of memory used or the runtime is finite but impossibly large.
+
+    An encryption algorithm has a security level of n bits if the best known attack requires $\mathcal{O}(2^n)$ steps.
+    \subsection{"Easy" symmmetric ciphers}
+    \subsubsection{Vernam (XOR) cipher}
+    
+    \subsubsection{Caesar (modular addition) cipher}
+
+    \subsubsection{Rot (circular shift) cipher}
+    \subsection{Modular arithmetic}
+    \subsubsection{Modular multiplication}
+    \subsubsection{Galois cipher}
+    \subsection{Scenarios of Attacks and CPA-IND goal}
+    \subsection{Attack Scenarios}
+    \paragraph{Ciphertext-only attack.}
+    The cryptanalyst has the ciphertext of several messages, all of which have been encrypted using the same algorithm. The cryptanalyst's job is to recover the plaintext of as many messages as possible, or better yet deduce the keys used to encrypt the messages, in order to decrypt other messages encrypted with the same key.
+    \paragraph{Known-plaintext attack.}
+    The cryptanalyst also has access to the plaintext of several encrypted messages. His job is to deduce the key used to encrypt those messages.
+    \paragraph{Chosen-plaintext attack.}
+    The cryptanalyst can also choose how the plaintext gets encrypted. The goal is to deduce the encryption key.
+    \paragraph{Adaptive-chosen-plaitext attack.}
+    A special case of chosen-plaintext attack. The cryptanalyst can choose the plaintext to encrypt and modify his choice based on the results of the previous encryption.
+    \paragraph{Chosen-ciphertext attack.}
+    The cryptanalyst can choose different ciphertext to be decrypted and has access to decrypted plaintext. The goal is to deduce the key.
+    \paragraph{Chosen-key attack.}
+    The cryptanalyst has some knowledge about the relationship between different keys.
+    \paragraph{Rubber-hose analysis}
+    The cryptanalyst uses violence and/or bribery to get the key. Straightforward!
+    \subsection{CPA-IND and Probabilistic Encryption}
+    Ciphertext indistinguishability is a property of many encryption schemes.
+    Intuitively, if a cryptosystem possesses the property of indistinguishability, then an adversary will be unable to distinguish pairs of ciphertexts based on the message they encrypt. The property of indistinguishability under chosen plaintext attack is considered a basic requirement for most provably secure public key cryptosystems.
+
+    A cryptosystem is considered secure in terms of indistinguishability if no adversary, given an encryption of a message randomly chosen from a two-element message space determined by the adversary, can identify the message choice with probability significantly better than that of random guessing.
+
+    CPA-IND experiment:
+    \begin{enumerate}
+        \item A key $k$ is generated by running $Gen(1^n$).
+        \item The adversary $A$ is given input $1^n$ and oracle access to $Enc_k(\cdot)$.
+        \item A random bit $b\leftarrow\{0,1\}$ is chosen, and a ciphertext $c\leftarrow Enc_k(m_b)$ is computed and given to $A$. We call $c$ the challenge ciphertext.
+        \item The adversary $A$ continues to have oracle access to $Enc_k(\cdot)$, and outputs a bit $b'$.
+        \item The output of the experiment is defined to be 1 if $b'=b$, and 0 otherwise. 
+    \end{enumerate}
+    \section{Week 2}
+    \subsection{Randomness}
+    Randomness is found everywhere in cryptography: in the generation of secret keys, in encryption schemes, and even in the attacks on cryptosystems. Without randomness, cryptography would be impossible because all operations would become predictable, and therefore insecure.
+    \subsubsection{TRNG}
+    True random number generators (TRNGs) are characterized by the fact that their output cannot be reproduced. RNGs are based on physical processes that cannot be reproduced. In computer systems, modern CPUs are often equipped with hardware-based TRNGs or else there is a TPM (trusted platform module) on the motherboard which contains a TRNG. In computer systems without a hardware TRNG, random processes within the computer are used as entropy sources, e.g., fine-grained timing measurements of interrupts or other random data from device drivers.
+    \subsubsection{PRNG}
+    (Cryptographycally secure) Pseudorandom number generators (PRNGs) generate sequences which are computed from an initial seed value. Formally, a PRNG is a function $G:\mathbb{Z}^n_2\rightarrow\mathbb{Z}^{l(n)}_2, l(n)>n$, such that no adversary $A$ can succeed the PRG-IND experiment with probability $>1/2$.
+
+    PRG-IND experiment:
+    \begin{enumerate}
+        \item A uniform bit $b\in\{0,1\}$ is chosen. If $b=0$, then choose a uniform $r\in\{0,1\}^{l(n)}$; if $b=1$ then choose a uniform $s\in\{0,1\}^n$ and set $r=G(s)$.
+        \item The adversary $A$ is given $r$, and outputs a bit $b'$.
+        \item The output of the experiment is defined to be 1 if $b'=b$ and 0 otherwise.
+    \end{enumerate}
+    
+    Usually, PRNGs are constructed procedurally from two algorithms:
+    \begin{itemize}
+        \item Init: takes as input a seed £s£ and an optional initialization vector, and outputs an initial state $st_0$
+        \item GetBits: takes as input $st_i$, outputs a bit $y$ and updates the state to $st_{i+1}$
+    \end{itemize}
+    \subsection{Linear Congruential Generator}
+    A linear congruential generator (LCG) is an algorithm that yields a sequence of pseudo-randomized numbers calculated with a discontinuous piecewise linear equation. 
+
+    The generator is defined by the recurrence relation:
+    \begin{equation*}
+        X_{n+1}=(aX_n+c)\mod m
+    \end{equation*}
+    where $m$ is the modulus, $a$ is the multiplier, $c$ is the increment, and $X_0$ is the seed, and are all integer constants. If $c=0$, the generator is called Lehmer RNG.
+    \subsubsection{Park Miller RNG}
+    The Park-Miller random number generator (after Stephen K. Park and Keith W. Miller), is a type of linear congruential generator (LCG) that operates in multiplicative group of integers modulo n. The general formula is 
+    \begin{equation*}
+        X_{k+1}=a\cdot X_k \mod m
+    \end{equation*}
+    where $m$ is a prime number or a power of a prime number, the multiplier $a$ is an element of high multiplicative order modulo $m$ (e.g., a primitive root modulo $n$), and the seed $X_0$ is coprime to $m$. 
+    \subsection{Stream Ciphers and Operation Modes}
+    Stream ciphers encrypt bits individually. This is achieved by adding a bit from a key stream to a plaintext bit. 
+    \subsubsection{Synchronized}
+    In synchronized stream ciphers the key stream depends only on the key.
+    \subsubsection{Asynchronized}
+    In asynchronized stream ciphers the key stream depends also in ciphertext.
+    \subsection{Linear-Feedback Shift Register LFSR}
+    An LFSR consists of clocked storage elements (flip-flops) and a feedback path. The number of storage elements gives us the degree of the LFSR. In other words, an LFSR with m flip-flops is said to be of degree m. The feedback network computes the input for the last flip-flop as the XOR-sum of certain flip-flops in the shift register.
+    \subsubsection{Fibonacci LFSRs}
+    The bit positions that affect the next state are called the taps. The rightmost bit of the LFSR is called the output bit, which is always also a tap. To obtain the next state, the tap bits are XOR-ed sequentially; then, all bits are shifted one place to the right, with the rightmost bit being discarded, and that result of XOR-ing the tap bits is fed back into the now-vacant leftmost bit. To obtain the pseudorandom output stream, read the rightmost bit after each state transition. 
+
+    The arrangement of taps for feedback in an LFSR can be expressed in finite field arithmetic as a polynomial mod 2. This means that the coefficients of the polynomial must be 1s or 0s. This is called the feedback polynomial or reciprocal characteristic polynomial. For example, if the taps are at the 16th, 14th, 13th and 11th bits, the feedback polynomial is 
+    \begin{equation*}
+        x^{16}+x^{14}+x^{13}+x^{11}+1
+    \end{equation*}
+    The "one" in the polynomial does not correspond to a tap, it corresponds to the input to the first bit.
+    \subsubsection{Galois LFSRs}
+    In the Galois configuration, when the system is clocked, bits that are not taps are shifted one position to the right unchanged. The taps, on the other hand, are XORed with the output bit before they are stored in the next position. The new output bit is the next input bit. The effect of this is that when the output bit is zero, all the bits in the register shift to the right unchanged, and the input bit becomes zero. When the output bit is one, the bits in the tap positions all flip (if they are 0, they become 1, and if they are 1, they become 0), and then the entire register is shifted to the right and the input bit becomes 1. 
+    \subsubsection{Correlation Attack}
+    Correlation attacks are a class of cryptographic known-plaintext attacks for breaking stream ciphers whose keystreams are generated by combining the output of several linear-feedback shift registers (LFSRs) using a Boolean function.
+    \subsection{Permutation}
+    \subsubsection{Keccak-Sponge Key Stream}
+    \subsubsection{Keccak-$f$ Permutations}
+    
+    \section{Week 3}
+\end{document}

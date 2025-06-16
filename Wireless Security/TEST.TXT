@@ -1,0 +1,164 @@
+CONFIGURAZIONE WIFI-ETHERNET:
+PROTOCOLLO 802.11ax
+
+2 PC CON LINUX:
+    A-> IP(192.168.0.111), NETMASK(255.255.255.0),DG(192.168.0.1)
+    B-> IP(192.168.0.106), NETMASK(255.255.255.0),DG(192.168.0.1)
+IL PC A COLLEGATO TRAMITE ETHERNET AL ROUTER CON CAVO CATe CON CAPACITÀ 1000Mbit/sec
+
+IL PC B UTILIZZA WIFI 6 con 5 GHz e 80MHz, CAPACITÀ TEORICA 1201 Mbit/sec 
+
+UN ROUTER TPLINK AX-1500 WIFI-6 
+
+
+DATI CON PC A CHE RUNNA test.py (PC connesso al wifi fa da server e PC connesso ad ethernet fa da client)
+
+Risultati dei test RECEIVER iperf3:
+Minimo throughput: 712.0 Mbit/s
+Massimo throughput: 762.0 Mbit/s
+Media throughput: 745.8 Mbit/s
+Deviazione standard: 14.878171930717832 Mbit/s
+
+Risultati dei test SENDER iperf3:
+Minimo throughput: 714.0 Mbit/s
+Massimo throughput: 765.0 Mbit/s
+Media throughput: 755.4 Mbit/s
+Deviazione standard: 14.361058456812994 Mbit/s
+
+
+DATI CON PC B CHE RUNNA test.py
+
+
+Risultati dei test RECEIVER iperf3:
+Minimo throughput: 522.0 Mbit/s
+Massimo throughput: 557.0 Mbit/s
+Media throughput: 540.4 Mbit/s
+Deviazione standard: 10.938007131100253 Mbit/s
+
+Risultati dei test SENDER iperf3:
+Minimo throughput: 524.0 Mbit/s
+Massimo throughput: 559.0 Mbit/s
+Media throughput: 542.9 Mbit/s
+Deviazione standard: 10.802314566795395 Mbit/s
+
+
+
+
+
+
+CONFIGURAZIONE ETHERNET-ETHERNET:
+PROTOCOLLO:802.11ab
+2 PC CON LINUX:
+A-> IP(192.168.0.111), NETMASK(255.255.255.0),DG(192.168.0.1)
+    B-> IP(192.168.0.126), NETMASK(255.255.255.0),DG(192.168.0.1)
+IL PC A COLLEGATO TRAMITE ETHERNET AL ROUTER CON CAVO CAT5e CON CAPACITÀ 100Mbit/sec
+
+IL PC B COLLEGATO TRAMITE ETHERNET AL ROUTER CON CAVO CAT5e CON CAPACITÀ 1000Mbit/sec
+FULL DUPLEX
+CAPACITÀ TEORICA: 100mBIT/SEC
+Using TCP, on Ethernet UTCP = (1460)/(1460+20+20)+38 = 0.949
+
+UN ROUTER TPLINK AX-1500 WIFI-6 
+
+
+DATI CON PC A CHE RUNNA test.py (PC connesso al wifi fa da server e PC connesso ad ethernet fa da client)
+
+Risultati dei test RECEIVER iperf3:
+Minimo throughput: 94.1 Mbit/s
+Massimo throughput: 94.1 Mbit/s
+Media throughput: 94.1 Mbit/s
+Deviazione standard: 0.0 Mbit/s
+
+Risultati dei test SENDER iperf3:
+Minimo throughput: 94.7 Mbit/s
+Massimo throughput: 94.9 Mbit/s
+Media throughput: 94.82 Mbit/s
+Deviazione standard: 0.07483314773548065 Mbit/s
+
+
+DATI CON PC B CHE RUNNA test.py
+
+Risultati dei test RECEIVER iperf3:
+Minimo throughput: 94.0 Mbit/s
+Massimo throughput: 94.1 Mbit/s
+Media throughput: 94.09 Mbit/s
+Deviazione standard: 0.02999999999999829 Mbit/s
+
+Risultati dei test SENDER iperf3:
+Minimo throughput: 94.6 Mbit/s
+Massimo throughput: 94.9 Mbit/s
+Media throughput: 94.78 Mbit/s
+Deviazione standard: 0.11661903789690962 Mbit/s
+
+
+
+CONFIGURAZIONE WIFI-WIFI:
+PROTOCOLLO 802.11n
+DUE PC A,B
+IPA(192.168.43.227) IPB(192.168.43.10) NETMASK(255.255.255.0) DG(192.168.43.1)
+UN ANDROID COME AP 
+
+CAPACITÀ
+
+CANALE 11
+VERSIONE 802.11n
+
+
+RISULTATI CON PC A CHE RUNNA TEST.PY
+    Risultati dei test RECEIVER iperf3:
+    Minimo throughput: 1.04 Mbit/s
+    Massimo throughput: 1.05 Mbit/s
+    Media throughput: 1.043 Mbit/s
+    Deviazione standard: 0.004582575694955844 Mbit/s
+
+    Risultati dei test SENDER iperf3:
+    Minimo throughput: 1.05 Mbit/s
+    Massimo throughput: 1.05 Mbit/s
+    Media throughput: 1.0500000000000003 Mbit/s
+    Deviazione standard: 2.220446049250313e-16 Mbit/s
+
+
+RISULTATI CON PC B CHE RUNNA TEST.PY
+
+    Risultati dei test RECEIVER iperf3:
+    Minimo throughput: 0.972 Mbit/s
+    Massimo throughput: 1.04 Mbit/s
+    Media throughput: 1.0222 Mbit/s
+    Deviazione standard: 0.019888690253508416 Mbit/s
+
+    Risultati dei test SENDER iperf3:
+    Minimo throughput: 1.05 Mbit/s
+    Massimo throughput: 1.05 Mbit/s
+    Media throughput: 1.0500000000000003 Mbit/s
+    Deviazione standard: 2.220446049250313e-16 Mbit/s
+
+
+    Ecco le capacità teoriche massime per i protocolli che hai richiesto:  
+
+### **Wi-Fi (Wireless, IEEE 802.11)**  
+1. **802.11n (Wi-Fi 4)**  
+   - **Bande:** 2.4 GHz e 5 GHz  
+   - **Larghezza di banda:** 20 MHz o 40 MHz  
+   - **Modulazione:** Fino a **64-QAM**  
+   - **MIMO:** Supporta **fino a 4x4 MIMO**  
+   - **Velocità massima teorica:**  
+     - **150 Mbps** per singolo stream su 40 MHz  
+     - **600 Mbps** con 4x4 MIMO su 40 MHz  
+
+2. **802.11ax (Wi-Fi 6)**  
+   - **Bande:** 2.4 GHz, 5 GHz e (con Wi-Fi 6E) 6 GHz  
+   - **Larghezza di banda:** 20, 40, 80, 160 MHz  
+   - **Modulazione:** Fino a **1024-QAM**  
+   - **OFDMA e MU-MIMO:** Supporta trasmissioni più efficienti  
+   - **Velocità massima teorica:**  
+     - **1200 Mbps per singolo stream su 160 MHz**  
+     - **9.6 Gbps** con 8x8 MIMO su 160 MHz  
+
+---
+
+### **Ethernet (Cablato, IEEE 802.3)**  
+3. **802.3ab (Gigabit Ethernet, 1000BASE-T)**  
+   - **Tipo di cavo:** **Cat5e** o superiore, UTP (rame)  
+   - **Distanza massima:** 100 metri  
+   - **Velocità massima teorica:** **1 Gbps (1000 Mbps)**  
+   - **Duplex:** Full-duplex (può trasmettere e ricevere contemporaneamente)  
