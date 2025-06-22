@@ -1,6 +1,6 @@
 # Bluetooth Low Energy (LE)
 
-The following is an exhaustive guide on how the Bluetooth Low Energy (LE) protocol works. Based on the [Bluetooth LE Primer](https://www.bluetooth.com/bluetooth-resources/the-bluetooth-low-energy-primer/).
+Based on the [Bluetooth LE Primer](https://www.bluetooth.com/bluetooth-resources/the-bluetooth-low-energy-primer/).
 
 ## Bluetooth LE Specifications
 
@@ -237,3 +237,58 @@ The defined Generic Attribute Profile service allows a client to determine wheth
 ## The Generic Attribute Profile
 
 The Generic Attribute Profile (GATT) defines higher level data types based on the attributes held in the attribute table. Those data types are called services, characteristics and descriptors. It also defines a series of procedures involved in using these data types via the Attribute Protocol (ATT).
+
+- **services**: grouping mechanisms which provide a context within which to use the characteristics that they contain and have a defined type
+- **characteristics**: individual items of state data, they have a type, an associated value and a set of properties which indicate how the data may be used in terms of sets of related GATT procedures; they belong to a service
+- **descriptors**: belong to some characteristics and can contain metadata; characteristics can have zero or more descriptors attached to them
+
+![Hierarchical structure of service, characteristics and descriptors](servchardesc.png)
+
+The GATT client sends ATT commands and requests to the GATT server. The GATT server accepts and processes commands and requests received from a GATT client and sends to the GATT client ATT notifications, indications and responses.
+
+Two special services are mandatory in all GATT servers:
+
+- **generic access service**
+- **generic attribute service**
+
+## Generic Access Profile
+
+The Generic Access Profile (GAP) defines procedures concerned with device discovery and establishing connections between two devices.
+
+GAP defines four service roles:
+
+- **broadcaster**: device which uses some form of advertising to transmit data in a connectionless manner
+- **observer**: receives advertising packets or broadcast isochronous stream data packets
+- **peripheral**: can be connnected to a central device
+- **central**: is able to initiate the establishment of a connection with a peripheral device
+
+
+### Discovery
+
+A broadcaster or peripheral device can be in one of the following modes:
+
+- **non-discoverable mode**: transmitted packets are visible over the air, but scanning devices performing either general discoverable or limited discoverable procedures will ignore these packets
+- **general discoverable**: device is discoverable for an indefinite amount of time
+- **limited discoverable**: device is discoverable for a maximum of 3 minutes
+
+When a central or observer device attemmps to discover other device it may use either:
+
+- **passive scanning**: involves receiving PDUs without sending any scanning PDUs
+- **active scanning**: involves receiving advertising PDUs and requesting more information in response by sending scanning PDUs
+
+Advertising as used by GAp may be:
+
+- **undirected**: PDUs are applicable to any observer or central device that receives them
+- **directed**: only a specific device should process received PDUs
+
+![GAP discovery and connection modes](gapmodes.png)
+
+Certain advertising PDU types are said to be scannable. This means that a device receiving such a PDU is permitted to respond with a scan request PDU of an appropriate type, to request more advertising data.
+
+Periodic Advertising is performed by the link layer but GAP specifies the procedure for a Broadcaster to enter periodic advertising mode and for an Observer to synchronize with a periodic advertising train.
+
+## Security Manager Protocol
+
+The security manager protocol (SMP) is part of the stack’s security manager component. It supports the execution of security related procedures such as pairing, bonding and key distribution.
+
+The security manager component provides a cryptographic toolbox for security functions which other layers can use and defines pairing algorithms.
