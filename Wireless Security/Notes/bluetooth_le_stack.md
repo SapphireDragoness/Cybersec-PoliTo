@@ -244,7 +244,7 @@ The Generic Attribute Profile (GATT) defines higher level data types based on th
 
 ![Hierarchical structure of service, characteristics and descriptors](servchardesc.png)
 
-The GATT client sends ATT commands and requests to the GATT server. The GATT server accepts and processes commands and requests received from a GATT client and sends to the GATT client ATT notifications, indications and responses.
+The GATT client sends ATT commands and requests to the GATT server. The GATT server accepts and processes commands and requests received from a GATT client and sends to the GATT client ATT notifications, indications and responses. This avoids the need for the client to poll the server, which would require the server's radio circuitry to be constantly operational.
 
 Two special services are mandatory in all GATT servers:
 
@@ -261,7 +261,6 @@ GAP defines four service roles:
 - **observer**: receives advertising packets or broadcast isochronous stream data packets
 - **peripheral**: can be connnected to a central device
 - **central**: is able to initiate the establishment of a connection with a peripheral device
-
 
 ### Discovery
 
@@ -292,3 +291,9 @@ Periodic Advertising is performed by the link layer but GAP specifies the proced
 The security manager protocol (SMP) is part of the stack’s security manager component. It supports the execution of security related procedures such as pairing, bonding and key distribution.
 
 The security manager component provides a cryptographic toolbox for security functions which other layers can use and defines pairing algorithms.
+
+## TLDR
+
+### GATT
+
+General specification for sending and receiving short pieces of data, known as attributes, over a low energy link.
