@@ -45,7 +45,7 @@ Summary of Bluetooth LE layers:
 - **generic attribute profile**: defines high level data types known as services, characteristics and descriptors in terms of underlying attributes in the attribute table
 - **generic access profile**: defines operational modes and procedures which may be used when in a non-connected state, security levels and models, and some user interface standards
 
-![Bluetooth LE stack](bt_le_stack.png)
+![Bluetooth LE stack](Images/bt_le_stack.png)
 
 ## Physical Layer
 
@@ -94,11 +94,11 @@ transmitted:
 
 The Link Layer defines two packet types. The following packet is used by the uncoded PHYs:
 
-![Link layer packet format for the LE uncoded PHYs](packet1.png)
+![Link layer packet format for the LE uncoded PHYs](Images/packet1.png)
 
 While the following is used by the Coded PHY:
 
-![Link layer packet format for the LE coded PHY](packet2.png)
+![Link layer packet format for the LE coded PHY](Images/packet2.png)
 
 - **preamble**: allows the receiver to synchronize precisely on the frequency of the signal, perform automatic gain control and estimate the symbol timing
 - **access address**: used by receivers to differentiate signals from background noise and to determine the relevance or otherwise of a packet to the receiving device
@@ -110,7 +110,7 @@ While the following is used by the Coded PHY:
 
 The link layer is defined by a state machine:
 
-![Link layer state machine](statemachine.png)
+![Link layer state machine](Images/statemachine.png)
 
 - **standby**: neither transmitting nor receiveing packets
 - **initiating**: responds to advertising packets from a particular device to request a connection
@@ -242,7 +242,7 @@ The Generic Attribute Profile (GATT) defines higher level data types based on th
 - **characteristics**: individual items of state data, they have a type, an associated value and a set of properties which indicate how the data may be used in terms of sets of related GATT procedures; they belong to a service
 - **descriptors**: belong to some characteristics and can contain metadata; characteristics can have zero or more descriptors attached to them
 
-![Hierarchical structure of service, characteristics and descriptors](servchardesc.png)
+![Hierarchical structure of service, characteristics and descriptors](Images/servchardesc.png)
 
 The GATT client sends ATT commands and requests to the GATT server. The GATT server accepts and processes commands and requests received from a GATT client and sends to the GATT client ATT notifications, indications and responses. This avoids the need for the client to poll the server, which would require the server's radio circuitry to be constantly operational.
 
@@ -280,7 +280,7 @@ Advertising as used by GAp may be:
 - **undirected**: PDUs are applicable to any observer or central device that receives them
 - **directed**: only a specific device should process received PDUs
 
-![GAP discovery and connection modes](gapmodes.png)
+![GAP discovery and connection modes](Images/gapmodes.png)
 
 Certain advertising PDU types are said to be scannable. This means that a device receiving such a PDU is permitted to respond with a scan request PDU of an appropriate type, to request more advertising data.
 
